@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page, indexs) in pages" :key="indexs">
         <div class="icon" v-for="(item, index) in page" :key="index">
           <div class="icon-img">
@@ -9,6 +9,7 @@
           <p class="icon-desc">{{item.desc}}</p>
         </div>
       </swiper-slide>
+      <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
   </div>
 </template>
@@ -18,6 +19,10 @@ export default {
   name: 'HomeIcons',
   data () {
     return {
+      swiperOption: {
+        // 所有的参数同 swiper 官方 api 参数
+        pagination: '.swiper-pagination'
+      },
       iconsList: [{
         id: '001',
         imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
@@ -83,12 +88,19 @@ export default {
   @import '~styles/mixins.styl'
   .icons >>> .swiper-container
     height: 0
-    padding-bottom: 50%
+    padding-bottom: 52%
+  .icons >>> .swiper-pagination-bullet-active{
+    background: $bgColor
+  }
+  .icons >>> .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
   .icon
     float: left
     width: 25%
     height: 0
-    padding-bottom: 25%
+    padding-bottom: 22%
     position: relative
     .icon-img
       position: absolute
