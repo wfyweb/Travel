@@ -29,35 +29,35 @@ export default {
         desc: '景点门票'
       }, {
         id: '002',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
         desc: '一日游'
       }, {
         id: '003',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
         desc: '北京必游'
       }, {
         id: '004',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/47/c2b659e048b11602.png',
         desc: '溜娃儿'
       }, {
         id: '005',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20191/0334cf5430b9b5505fd79e2b8d7e8670.png',
         desc: '爬长城'
       }, {
         id: '006',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png',
         desc: '故宫'
       }, {
         id: '007',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
         desc: '茶馆相声'
       }, {
         id: '008',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
         desc: '踏青赏花'
       }, {
         id: '009',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png',
         desc: '泡温泉'
       }, {
         id: '010',
@@ -88,7 +88,7 @@ export default {
   @import '~styles/mixins.styl'
   .icons >>> .swiper-container
     height: 0
-    padding-bottom: 52%
+    padding-bottom: 50%
   .icons >>> .swiper-pagination-bullet-active{
     background: $bgColor
   }
@@ -114,6 +114,7 @@ export default {
         margin: 0 auto
         height: 100%
     .icon-desc
+      font-size: .24rem;
       color: $darkTextColor
       height :.44rem
       line-height :.44rem
