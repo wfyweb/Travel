@@ -19,28 +19,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      list: [{
-        id: '001',
-        title: '鸟巢',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/fe/434ee530e21f1c11bad088e8cc8d5e93.water.jpg_200x200_912ce9f4.jpg',
-        desc: '北京的地标，中华民族崛起的象征'
-      }, {
-        id: '002',
-        title: '故宫',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg',
-        desc: '世界五大宫之首，穿越与您近在咫尺'
-      }, {
-        id: '003',
-        title: '北京野生动物园',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg',
-        desc: '敢与森林之王近距离接触吗？'
-      },]
-    }
-  },
-  computed: {
-
+  props: {
+    list: Array
   }
 }
 </script>

@@ -20,25 +20,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      list: [{
-        id: '001',
-        title: '北京赏花好地方',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1603/6d/2f67ae0659f41f.jpg_r_640x214_bf6cbd0b.jpg',
-        desc: '乱花渐欲迷人眼，京城赏花大搜索'
-      }, {
-        id: '002',
-        title: '京城周末撒欢',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg',
-        desc: '在帝都过周末，不仅仅是城中游！'
-      }, {
-        id: '003',
-        title: '京城溜娃必去',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1811/7e/476589267ebb41.jpg_r_640x214_bf599709.jpg',
-        desc: '德智体美劳全面发展的亲子日，这些地方该去看看…'
-      },]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
