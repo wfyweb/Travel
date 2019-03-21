@@ -20,7 +20,7 @@ export default {
   .search
     height $headerHeight
     background $bgColor
-    padding 0 .1rem
+    padding 0 .2rem
     .search-input
       box-sizing border-box
       padding 0 .1rem
