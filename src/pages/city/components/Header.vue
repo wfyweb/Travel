@@ -8,7 +8,7 @@
         <div class="iconfont back-icon">&#xe624;</div>
     </router-link>
     <div class="header-title">
-      城市
+      城市选择
     </div>
   </div>
 </template>
@@ -18,13 +18,12 @@ export default {
   name: 'CityHeader',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
   .header
