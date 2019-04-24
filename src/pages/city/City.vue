@@ -5,9 +5,11 @@
     <city-list
       :hot = "hotCities"
       :cities = "cities"
+      :letter = "letter"
     ></city-list>
     <city-alphabet
       :cities = "cities"
+      @change = "handleLetterChange"
     ></city-alphabet>
   </div>
 </template>
@@ -28,7 +30,8 @@ export default {
   data () {
     return {
       hotCities: [],
-      cities: {}
+      cities: {},
+      letter: ''
     }
   },
   methods: {
@@ -41,8 +44,11 @@ export default {
         const data = res.data.data
         this.cities = data.cities
         this.hotCities = data.hotCities
-        console.log(data)
       }
+    },
+    // 接收Alphabet组件的change事件
+    handleLetterChange (letter) {
+      this.letter = letter
     }
   },
   mounted () {
