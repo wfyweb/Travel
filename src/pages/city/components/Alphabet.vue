@@ -23,8 +23,13 @@ export default {
   data () {
     return {
       currentIndex: 0,
-      touchStatus: false
+      touchStatus: false,
+      startY: 0,
+      timer: null
     }
+  },
+  updated () {
+    this.startY = this.$refs['A'][0].offsetTop
   },
   computed: {
     letters () {
@@ -45,14 +50,20 @@ export default {
     handleTouchStart () {
       this.touchStatus = true
     },
+    // 性能优化。 1.提取固定变量。2.move事件函数节流
     handleTouchMove (e) {
       if (this.touchStatus) {
-        const startY = this.$refs['A'][0].offsetTop
-        const touchY = e.touches[0].clientY - 86
-        const index = Math.floor((touchY - startY) / 20)
-        if (index >= 0 && index < this.letters.length) {
-          this.$emit('change', this.letters[index])
+        if (this.timer) {
+          clearTimeout(this.timer)
         }
+        this.timer = setTimeout(() => {
+          const touchY = e.touches[0].clientY - 86
+          const index = Math.floor((touchY - this.startY) / 20)
+          this.currentIndex = index
+          if (index >= 0 && index < this.letters.length) {
+            this.$emit('change', this.letters[index])
+          }
+        }, 16)
       }
     },
     handleTochEnd () {
